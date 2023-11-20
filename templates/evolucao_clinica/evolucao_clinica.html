@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+           $('#calendario').fullCalendar({
+               selectable: true,
+               select: function(start, end) {
+                   // Manipule o intervalo de datas selecionado aqui
+                   alert('Data selecionada: ' + start.format() + ' até ' + end.format());
+               },
+               events: [
+                   {
+                       title: 'Evento 1',
+                       start: '2023-10-23'
+                   },
+                   {
+                       title: 'Evento 2',
+                       start: '2023-10-24'
+                   }
+                   // Adicione mais eventos conforme necessário
+               ]
+           });
+       });
+   </script>
+</head>
+
+
+
+<body style = "background-color: rgb(#2356ad)">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Início</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Fornecedores -->
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\paciente\paciente.html">Paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\consultas\consultas.html">Consultas</a>
+                </li>
+                <!-- Produtos -->
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\historico\historico.html">Histórico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\evolucao_clinica\evolucao_clinica.html">Evolução clínica</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="my-4" >Evolução clínica</h1>
+        <form method="POST" class="form_">
+            <div class="calend_ext">
+                <div id='calendario' class='form_2' style="width: 500px; background-color: rgb(#2356ad);">
+                </div>    
+            </div>
+            <div>
+                <label for="hora">Hora</label>
+            </div>
+            <input type="text" class="form-control_" id="hora" name="hora" required>
+            <div>
+                <label for="temperatura">Temperatura</label>
+            </div>
+            <input type="text" class="form-control_" id="temperatura" name="temperatura" required>
+            <div>
+                <label for="pressao">Pressão arterial</label>
+            </div>
+            <input type="text" class="form-control_" id="pressao" name="pressao" required>
+            <div>
+                <label for="freq_card">Frequência cardíada</label>
+            </div>
+            <input type="text" class="form-control_" id="freq_card" name="freq_card" required>
+            <div>
+                <label for="saturacao">Saturação do oxigênio</label>
+            </div>
+            <input type="text" class="form-control_" id="saturacao" name="saturacao" required>
+            <div>
+                <label for="tratamento">Tratamento</label>
+            </div>
+            <input type="text" class="form-control_" id="tratamento" name="tratamento" required>
+            <div>
+                <label for="resp_trata">Resposta ao tratamento</label>
+            </div>
+            <input type="text" class="form-control_" id="resp_trata" name="resp_trata" required>
+            <div>
+                <label for="exames">Resultados de exames</label>
+            </div>
+            <input type="text" class="form-control_" id="exames" name="exames" required>
+            <div>
+                <input type="checkbox" class="form-check-input" id="moni_freq" name="moni_freq">
+                <label class="form-check-label" for="moni_freq">Monitoramento frequente</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style = "background-color: #2356ad; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Salvar</button>
+        </form>
+    </div>
+    <link href="C:\Users\mkpmachado\Documents\LKs-HealthCare\styles.css" rel="stylesheet">
+</body>
+
+</html>

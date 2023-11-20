@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style = "background-color: rgb(#2356ad)">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Início</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Fornecedores -->
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\paciente\paciente.html">Paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\consultas\consultas.html">Consultas</a>
+                </li>
+                <!-- Produtos -->
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\historico\historico.html">Histórico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\mkpmachado\Documents\LKs-HealthCare\templates\evolucao_clinica\evolucao_clinica.html">Evolução clínica</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="my-4" >Cadastrar Paciente</h1>
+        <form method="POST" class="form_">
+            <div>
+                <label for="nome">Nome completo</label>
+            </div>
+            <input type="text" class="form-control_" id="nome" name="nome" required>
+            <div>
+                <label for="data_nasc">Data de nascimento</label>
+            </div>
+            <input type="text" class="form-control_" id="data_nasc" name="data_nasc" required>
+            <div>
+                <label style = "width: 300px;" for="sexo">Sexo</label>
+            </div>
+            <input type="checkbox" class="form-check-input" id="sexof" name="sexof">
+            <label class="form-check-label" for="situacao">Feminino</label>
+            <input type="checkbox" class="form-check-input" id="sexom" name="sexom">
+            <label class="form-check-label" for="situacao">Masculino</label>
+            <div>
+                <label style = "width: 300px;" for="cpf">CPF</label>
+            </div>
+            <input type="text" class="form-control_" id="cpf" name="cpf" required>
+            <div>
+                <label style = "width: 300px;" for="end">Endereço</label>
+            </div>
+            <input type="text" class="form-control_" id="end" name="end" required>
+            <div>
+                <label style = "width: 300px;" for="tele">Telefone</label>
+            </div>
+            <input type="text" class="form-control_" id="tele" name="tele" required>
+            <div>
+                <label style = "width: 300px;" for="email">Email</label>
+            </div>
+            <input type="text" class="form-control_" id="email" name="email" required>
+            <div>
+                <label style = "width: 300px;" for="responsavel">Responsável legal</label>
+            </div>
+            <input type="text" class="form-control_" id="responsavel" name="responsavel" required>
+            <div>
+                <label style = "width: 300px;" for="ctt_emergencia">Contato de emergência</label>
+            </div>
+            <input type="text" class="form-control_" id="ctt_emergencia" name="ctt_emergencia" required>
+            <div>
+                <button type="submit" class="btn btn-primary" style = "background-color: #2356ad; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+    <link href="C:\Users\mkpmachado\Documents\LKs-HealthCare\styles.css" rel="stylesheet">
+</body>
+</html>
